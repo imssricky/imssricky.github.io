@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="index.html#music" class="nav-link">Music</a></li>
+                    <li><a href="index.html#videos" class="nav-link">Videos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="videos" class="content-section">
+            <h2>Videos</h2>
+            <div class="video-grid">
+                <video class="video-item" controls>
+                    <source src="video/5.1血月.mp4" type="video/mp4">
+                </video>
+                <video class="video-item" controls>
+                    <source src="video/5.2海浪.mp4" type="video/mp4">
+                </video>
+                <video class="video-item" controls>
+                    <source src="video/5.3沙漠.mp4" type="video/mp4">
+                </video>
+                <video class="video-item" controls>
+                    <source src="video/videotest.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Ricky</p>
+        </footer>
+    </div>
+    <script src="library/p5.js"></script>
+</body>
+</html>

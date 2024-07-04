@@ -3,44 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        main {
-            padding: 1rem;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>Ricky's Art Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My  Webpage</h1>
-    </header>
-    <main>
-        <h2>About This Page</h2>
-        <p>This is a simple HTML webpage with basic structure. It includes a header, main content area, and a footer.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 Simple Webpage. All rights reserved.</p>
-    </footer>
+    <div id="app">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><button id="toggle-theme" class="nav-link">🌞</button></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#music" class="nav-link">Music</a></li>
+                    <li><a href="#videos" class="nav-link">Videos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="intro-animation" class="intro-animation">
+            <video src="video/天才3.mp4" autoplay muted></video>
+        </div>
+
+        <section id="home" class="content-section">
+            <div class="raindrop-container"></div>
+            <h1>Ricky's Art Portfolio</h1>
+            <p>Ricky is a genus.</p>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="raindrop-container"></div>
+            <h2>About Me</h2>
+            <p>Ricky is an artist known for her creative and interactive designs...</p>
+            <div class="code-container">
+                <pre class="code-block">
+class Me:
+    def __init__(self):
+        self.name = "ruiqi shang"
+        self.born_year = 2001
+        self.MBTI = "INTJ"
+        self.hometown = "Panjin, Liaoning, CN"
+        self.curr_location = "Shenyang, Liaoning, CN"
+        self.school = "LAFA"
+                </pre>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="raindrop-container"></div>
+            <h2>Contact</h2>
+            <p>Email: ruiqishang77@gmail.com</p>
+            <p>
+                <a href="https://www.instagram.com/ssricky.01" target="_blank">
+                    <i class="fab fa-instagram"></i> Follow me on Instagram
+                </a>
+            </p>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <div class="raindrop-container"></div>
+            <h2>Gallery</h2>
+            <div class="carousel">
+                <img src="image/picturetest (3).png" alt="Artwork 1">
+            </div>
+            <p><a href="image.html">View More in Gallery</a></p>
+        </section>
+
+        <section id="music" class="content-section">
+            <div class="raindrop-container"></div>
+            <h2>Music</h2>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="audio/INTJ.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </section>
+
+        <section id="videos" class="content-section">
+            <div class="raindrop-container"></div>
+            <h2>Videos</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="video/5.3沙漠.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p><a href="video.html">Watch More Videos</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Ricky</p>
+        </footer>
+    </div>
+    <script src="library/p5.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

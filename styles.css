@@ -1,0 +1,334 @@
+/* 样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全局样式 */
+body {
+    font-family: 'Cute Font', cursive;
+    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    position: relative;
+    overflow-x: hidden; /* 防止水平滚动 */
+}
+
+body.night-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+body.night-mode header {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: space-around;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a, #toggle-theme {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul li a:hover, #toggle-theme:hover {
+    color: #007BFF;
+}
+
+.content-section {
+    padding: 100px 20px;
+    text-align: center;
+    height: 100vh; /* 每个部分占满一屏高度 */
+    position: relative; /* 确保雨滴在section内部定位 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 确保内容居中 */
+}
+
+h2 {
+    margin-bottom: 20px;
+    animation: float 2s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.carousel {
+    display: flex;
+    overflow: auto;
+}
+
+.carousel img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+body.night-mode footer {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Raindrop Effect */
+.raindrop, .raindrop-bg {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: rgba(0, 0, 255, 0.5);
+    border-radius: 50%;
+    animation: raindrop-fall linear infinite;
+}
+
+@keyframes raindrop-fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0.7;
+    }
+}
+
+.splash {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(0, 0, 255, 0.5);
+    border-radius: 50%;
+    animation: splash 0.5s linear;
+    opacity: 0;
+}
+
+@keyframes splash {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* 代码块样式 */
+.code-container {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow: auto;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 视频容器样式 */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+video {
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+video:hover {
+    transform: scale(1.1);
+}
+
+/* 音频容器样式 */
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Intro Animation */
+.intro-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-animation video {
+    display: block;
+}
+
+/* Instagram Icon */
+.contact a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contact a:hover {
+    color: #E4405F;
+}
+
+.contact i {
+    margin-right: 8px;
+}
+
+/* Background Raindrop Effect */
+@keyframes raindrop-bg-fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0.7;
+    }
+}
+
+/* Particle Explosion Effect */
+.particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 221, 255, 0.8);
+    border-radius: 50%;
+    animation: particle-explosion 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes particle-explosion {
+    0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0) translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
+/* Gallery Grid */
+.gallery-grid {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    flex-wrap: wrap; /* 自动换行 */
+    gap: 10px;
+    padding: 20px;
+}
+/* Carousel */
+.carousel {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    overflow: auto;
+}
+.gallery-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-grid img.expanded {
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: zoom-out;
+}
+/* Video Grid */
+.video-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.video-item {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-item.expanded {
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: zoom-out;
+}
